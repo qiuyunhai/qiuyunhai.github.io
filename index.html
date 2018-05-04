@@ -2,108 +2,106 @@
 <html>
 
 	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<title></title>
-		<style type="text/css">
-			* {
-				margin: 0;
-				padding: 0;
-			}
-			
-			html,
-			body {
-				width: 100%;
-				height: 100%;
-				background-color: #efeff4;
-			}
-			
-			.header {
-				margin: 10px;
-			}
-			
-			h3 {
-				text-align: center;
-				color: #06F;
-			}
-			
-			.body {
-				margin: 0 20px;
-				background-color: #efeff4;
-				color: black;
-			}
-			
-			li {
-				list-style: none;
-				margin: 10px 0;
-			}
-			
-			.first {
-				font-size: 1.05rem;
-				font-weight: 600;
-				margin: 10px 0;
-				color: #c00;
-			}
-			
-			.bolder {
-				font-size: 1.04rem;
-				font-weight: 550;
-			}
-			
-			.footer {
-				margin: 20px 0;
-				text-align: right;
-			}
-		</style>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="css/mui.min.css">
+		<!--App自定义的css-->
+		<!--<link rel="stylesheet" type="text/css" href="css/app.css"/>-->
 	</head>
 
 	<body>
-		<div class="header">
-			<h3>汽车充电操作说明</h3>
-		</div>
-		<div class="body">
-			<ul>
-				<li class="first">
-					<span class="bolder">第一步: </span>
-				</li>
-				<li>
-					点击主页面“车辆服务”；进入“我要充电”页面；
-				</li>
-				<li class="first">
-					<span class="bolder">第二步: </span>
-				</li>
-				<li>
-					在“我要充电”页面填写充电信息：
-				</li>
-				<li style="text-indent: 0.6rem;">
-					<span class="bolder">1.	</span>输入充电桩的编码
-				</li>
-				<li style="text-indent: 0.6rem;">
-					<span class="bolder">2.	</span>输入充电金额
-				</li>
-				<li style="text-indent: 0.6rem;">
-					<span class="bolder">3.	</span>输入充电量(不给定充电金额的情况下)
-				</li>
-				<li style="text-indent: 0.6rem;">
-					<span class="bolder">4.	</span>也可以设置充电时长
-				</li>
-				<li class="first">
-					<span class="bolder">第三步: </span>
-				</li>
-				<li>
-					点击“我要充电”页面的“开始充电”按钮
-				</li>
-				<li class="first">
-					<span class="bolder">注意：</span>
-				</li>
-				<li style="text-indent: 0.6rem;">
-					<span class="bolder">1.	</span>当冲电余额足够的情况下，点击“我要充电”页面的“开始充电”按钮，可直接开始充电；
-				</li>
-				<li style="text-indent: 0.6rem;">
-					<span class="bolder">2.	</span>当冲电余额不足的情况下，点击“我要充电”页面的“开始充电”按钮，app会提示用户“余额不足”，请前往充值；
-				</li>
-			</ul>
+		<header class="mui-bar mui-bar-nav" style="background: #00ccff;">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color: white;"></a>
+			<h1 class="mui-title" style="color: white;">共享车位</h1>
+		</header>
+		<div class="mui-content">
+			<div id="slider" class="mui-slider">
+				<div class="mui-slider-group mui-slider-loop">
+					<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#">
+							<img src="images/yuantiao.jpg">
+							<p class="mui-slider-title">静静看这世界</p>
+						</a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="images/shuijiao.jpg">
+							<p class="mui-slider-title">幸福就是可以一起睡觉</p>
+						</a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="images/muwu.jpg">
+							<p class="mui-slider-title">想要一间这样的木屋，静静的喝咖啡</p>
+						</a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="images/cbd.jpg">
+							<p class="mui-slider-title">Color of SIP CBD</p>
+						</a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="images/yuantiao.jpg">
+							<p class="mui-slider-title">静静看这世界</p>
+						</a>
+					</div>
+					<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#">
+							<img src="images/shuijiao.jpg">
+							<p class="mui-slider-title">幸福就是可以一起睡觉</p>
+						</a>
+					</div>
+				</div>
+				<div class="mui-slider-indicator mui-text-right">
+					<div class="mui-indicator mui-active"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+				</div>
+			</div>
+			<form class="mui-input-group">
+				<div class="" style="padding: 15px;text-align: center;text-decoration: underline;">
+					<a href="appxieyi.html">共享协议</a>
+				</div>
+				<div class="mui-button-row">
+					<a class="mui-btn mui-btn-primary" href="applicationShare.html" style="color: white;">申请</a>
+					<a class="mui-btn mui-btn-danger" href="SharePublic.html" style="color: white;">发布</a>
+				</div>
+				<ul class="mui-table-view" style="margin-top: 20px;">
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" href="ShareApplyRecord.html">
+							申请查询
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" href="SharePublicDetail.html">
+							发布详情
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" href="ShareGetCash.html">
+							共享收益
+						</a>
+					</li>
+				</ul>
+			</form>
 		</div>
 	</body>
+	<script src="js/mui.min.js"></script>
+	<script>
+		var gallery = mui('#slider');
+		gallery.slider({
+			interval: 5000 //自动轮播周期，若为0则不自动播放，默认为0；
+		});
+	</script>
 
 </html>
